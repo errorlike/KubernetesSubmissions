@@ -1,3 +1,3 @@
 ## Log output app
 
-Deploy with `kubectl create deployment logoutput-dep --image=errorlike/log-output`
+Deploy with `kubectl apply -f manifests/deployment.yaml`
