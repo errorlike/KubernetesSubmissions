@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simplehtml-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simplehtml
+  template:
+    metadata:
+      labels:
+        app: simplehtml
+    spec:
+      containers:
+        - name: simplehtml
+          image: errorlike/simple-html:latest
+          env:
+            - name: PORT
+              value: "3003"
